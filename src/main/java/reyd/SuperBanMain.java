@@ -1,6 +1,8 @@
 package reyd;
 
 import cn.nukkit.plugin.PluginBase;
+import reyd.Command.SuperBanCMD;
+import reyd.Listener.LoginListener;
 
 public class SuperBanMain extends PluginBase {
 
@@ -13,6 +15,12 @@ public class SuperBanMain extends PluginBase {
 
     @Override
     public void onEnable() {
+
+        // register
+        getServer().getPluginManager().registerEvents(new LoginListener(), this); // listener
+        getServer().getCommandMap().register("help", new SuperBanCMD()); // command
+
+        // Standard
         super.onEnable();
     }
 
