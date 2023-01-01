@@ -16,6 +16,9 @@ public class SuperBanMain extends PluginBase {
     @Override
     public void onEnable() {
 
+        // config
+        this.saveDefaultConfig();
+
         // register
         getServer().getPluginManager().registerEvents(new LoginListener(), this); // listener
         getServer().getCommandMap().register("help", new SuperBanCMD()); // command

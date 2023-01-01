@@ -1,0 +1,3 @@
+sban:
+  descriptionCMD: "super ban player";
+  UsageCMD: "§cUsage: §7/sban <player> <reason>";
