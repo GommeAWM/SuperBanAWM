@@ -1,0 +1,5 @@
+main: reyd.SuperBanMain
+name: SuperBanAWM
+version: 1.0.1
+api: ["1.0.14"]
+author: Reydovich
