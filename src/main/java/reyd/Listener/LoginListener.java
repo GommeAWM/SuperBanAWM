@@ -17,8 +17,14 @@ public class LoginListener implements Listener {
     @EventHandler
     public void onPlayerPreLogin(PlayerPreLoginEvent event){
 
+        // Config
         Config bancollection_list = new Config(new File(SuperBanMain.getInstance().getDataFolder(), "/bandata.yml"), Config.YAML);
         bancollection_list.reload();
+
+        // Check (Empty)
+        if (bancollection_list.getAll().isEmpty()){
+            return;
+        }
 
         /*
         *
