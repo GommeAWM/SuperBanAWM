@@ -98,7 +98,7 @@ public class SuperBanCMD extends Command {
         bancollection_list.set(name + ".Reason", reason);
         bancollection_list.save();
 
-        // Ban Target
+        // kick Target
         target.kick(reason);
 
         // Message
@@ -107,8 +107,6 @@ public class SuperBanCMD extends Command {
                 helper.sendMessage(SuperBanMain.getInstance().getConfig().getString("sban.notification").replace("%tg%", target.getName()).replace("%p%", Admin.getName()).replace("%reason%", reasonMSG));
             }
         }
-
-        // ToDo Уведомление
 
     }
 

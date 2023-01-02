@@ -18,4 +18,4 @@ sban:
   notification: "§7(§cAdmin§7) §3Bans! §7(Super Ban)\n §fBlocked player: §b%tg%\n §fBlocked by аdministrator:  §c%p%.\n §freason: §6%reason%\n Period: §aFor Forеver"
 
   # Exception message (player not found)
-  playerNotFound: "Player %tg% not found"
+  playerNotFound: "§7Player §c%tg% §7nоt found"
