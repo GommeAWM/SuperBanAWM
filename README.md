@@ -9,6 +9,8 @@ Plugin SuperBan | Minecraft Bedrock Edition | API 1.0.14 | Nukkit | SupportAWM
 
 :star: Therefore, it is important to use this ban system responsibly and only ban players who have repeatedly and severely violated the rules. By limiting the number of players who are banned with this system, you can help to ensure that it does not negatively impact the performance of your server.<br />
 
+❗️: It's important to keep in mind that the SuperBanAWM plugin, is free, may not have the same level of optimization as a paid plugin!
+
 ---
 
 **Installation:**<br />
