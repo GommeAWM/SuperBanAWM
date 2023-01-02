@@ -101,7 +101,7 @@ public class SuperBanCMD extends Command {
 
         // Message
         for (Player helper : Server.getInstance().getOnlinePlayers().values()) {
-            if (helper.hasPermission("r.sban.ntfc")) {
+            if (helper.hasPermission("reyd.superban.ntfc")) {
                 helper.sendMessage(SuperBanMain.getInstance().getConfig().getString("sban.notification").replace("%p%", target.getName()).replace("%p%", Admin.getName()).replace("%reason%", reasonMSG));
             }
         }

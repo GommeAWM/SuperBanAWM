@@ -62,7 +62,7 @@ public class SuperPardonCMD extends Command {
                 status = true;
 
                 // message (From Config)
-                commandSender.sendMessage(SuperBanMain.getInstance().getConfig().getString("sban.pardonMessage").replace("%p%", name));
+                commandSender.sendMessage(SuperBanMain.getInstance().getConfig().getString("sban.pardonMessage").replace("%tg%", name));
             }
 
         }
@@ -71,7 +71,7 @@ public class SuperPardonCMD extends Command {
         if (!status){
 
             // message (From Config)
-            commandSender.sendMessage(SuperBanMain.getInstance().getConfig().getString("sban.playerNotFound").replace("%p%", name));
+            commandSender.sendMessage(SuperBanMain.getInstance().getConfig().getString("sban.playerNotFound").replace("%tg%", name));
         }
 
         return true;
