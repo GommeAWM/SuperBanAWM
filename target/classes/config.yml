@@ -1,10 +1,21 @@
 sban:
+
+  # Commands Section
   sbanDescrCMD: "§asuper ban player"
   sbanUsageCMD: "§cUsage: §7/sban <player> <reason>"
   spardonDescrCMD: "pardon player"
   spardonUsageCMD: "§cUsage: §7/spardon"
-  banMessage: "You have success banned player %p%"
-  pardonMessage: "You have success pardoned player %p%"
+  sbanlistDescrCMD: "list of super ban players"
+
+  # sendMessage Section
+  banMessage: "You have success banned player %tg%"
+  pardonMessage: "You have success pardoned player %tg%"
+
+  # %tg% = target || %p% = Admin || %reason% = reason
   reasonBan: "\n§r§6You, §a%tg% §f, §chave been blocked on the server\n§r§fReasоn: §6%reason%\n§r§6pardon is blocked\n§r§frules: §3link"
+
+  # after ban every one with permission reyd.superban.ntfc will get notification in Chat!
   notification: "§7(§cAdmin§7) §3Bans! §7(Super Ban)\n §fBlocked player: §b%tg%\n §fBlocked by аdministrator:  §c%p%.\n §freason: §6%reason%\n Period: §aFor Forеver"
+
+  # Exception message (player not found)
   playerNotFound: "Player %tg% not found"

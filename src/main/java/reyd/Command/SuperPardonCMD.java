@@ -26,6 +26,11 @@ public class SuperPardonCMD extends Command {
     @Override
     public boolean execute(CommandSender commandSender, String s, String[] args) {
 
+        // Permission Check
+        if (!commandSender.hasPermission("reyd.spardon")){
+            return true;
+        }
+
         // check arguments length
         if (args.length != 1){
             commandSender.sendMessage(SuperBanMain.getInstance().getConfig().getString("sban.spardonUsageCMD"));

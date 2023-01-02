@@ -23,11 +23,15 @@ public class SuperBanCMD extends Command {
                 CommandParameter.newType("player", CommandParamType.TARGET),
                 CommandParameter.newType("reason", CommandParamType.STRING),
         });
-        this.setPermission("reyd.sban.ban");
+        this.setPermission("reyd.sban");
     }
 
     @Override
     public boolean execute(CommandSender commandSender, String s, String[] args) {
+
+        if (!commandSender.hasPermission("reyd.sban")){
+            return true;
+        }
 
         if (args.length != 2){
             commandSender.sendMessage(SuperBanMain.getInstance().getConfig().getString("sban.sbanUsageCMD"));

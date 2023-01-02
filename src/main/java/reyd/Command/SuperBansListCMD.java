@@ -19,6 +19,11 @@ public class SuperBansListCMD extends Command {
     @Override
     public boolean execute(CommandSender commandSender, String s, String[] args) {
 
+        // Permission Check
+        if (!commandSender.hasPermission("reyd.sbanlist")){
+            return true;
+        }
+
         // Config Stuff
         Config bancollection_list = new Config(new File(SuperBanMain.getInstance().getDataFolder(), "/bandata.yml"), Config.YAML);
         bancollection_list.reload();
