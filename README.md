@@ -18,9 +18,9 @@ Plugin SuperBan | Minecraft Bedrock Edition | API 1.0.14 | Nukkit | SupportAWM
 ---
 
 **Usage:**<br />
-:unlock: /sban <player> <reason> <br />
+:unlock: /sban player reason <br />
 :unlock: /sbanlist <br />
-:unlock: /spardon <player> <br />
+:unlock: /spardon player <br />
 
 ---
 
