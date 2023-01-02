@@ -25,6 +25,7 @@ public class LoginListener implements Listener {
         * GET DATA
         *
         * */
+
         // player
         Player target = event.getPlayer();
 

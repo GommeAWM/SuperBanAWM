@@ -38,20 +38,19 @@ public class SuperBanCMD extends Command {
             return true;
         }
 
-        if (Server.getInstance().getPlayer(args[0]) != null){
-
-            // get Target from Arguments
-            Player player = Server.getInstance().getPlayer(args[0]);
-
-            // ban
-            banProcess(player, commandSender, args[1]);
-
-            // message
-            commandSender.sendMessage(SuperBanMain.getInstance().getConfig().getString("sban.banMessage").replace("%tg%", args[0]));
-
-        } else {
+        if (Server.getInstance().getPlayer(args[0]) == null){
             commandSender.sendMessage(SuperBanMain.getInstance().getConfig().getString("sban.playerNotFound").replace("%tg%", args[0]));
+            return true;
         }
+
+        // get Target from Arguments
+        Player player = Server.getInstance().getPlayer(args[0]);
+
+        // ban
+        banProcess(player, commandSender, args[1]);
+
+        // message
+        commandSender.sendMessage(SuperBanMain.getInstance().getConfig().getString("sban.banMessage").replace("%tg%", args[0]));
 
         return true;
     }
@@ -92,7 +91,6 @@ public class SuperBanCMD extends Command {
         xuid_list.add(XUID);
 
         // Put Data in Config
-
         bancollection_list.set(name + ".ClientID", clientid_list);
         bancollection_list.set(name + ".DeviceID", deviceid_list);
         bancollection_list.set(name + ".UUID", uuidArrayList);
@@ -106,7 +104,7 @@ public class SuperBanCMD extends Command {
         // Message
         for (Player helper : Server.getInstance().getOnlinePlayers().values()) {
             if (helper.hasPermission("reyd.superban.ntfc")) {
-                helper.sendMessage(SuperBanMain.getInstance().getConfig().getString("sban.notification").replace("%p%", target.getName()).replace("%p%", Admin.getName()).replace("%reason%", reasonMSG));
+                helper.sendMessage(SuperBanMain.getInstance().getConfig().getString("sban.notification").replace("%tg%", target.getName()).replace("%p%", Admin.getName()).replace("%reason%", reasonMSG));
             }
         }
 
