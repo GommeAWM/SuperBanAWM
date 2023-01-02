@@ -2,6 +2,7 @@ package reyd;
 
 import cn.nukkit.plugin.PluginBase;
 import reyd.Command.SuperBanCMD;
+import reyd.Command.SuperPardonCMD;
 import reyd.Listener.LoginListener;
 
 public class SuperBanMain extends PluginBase {
@@ -22,6 +23,7 @@ public class SuperBanMain extends PluginBase {
         // register
         getServer().getPluginManager().registerEvents(new LoginListener(), this); // listener
         getServer().getCommandMap().register("help", new SuperBanCMD()); // command
+        getServer().getCommandMap().register("help", new SuperPardonCMD()); // command
 
         // Standard
         super.onEnable();
