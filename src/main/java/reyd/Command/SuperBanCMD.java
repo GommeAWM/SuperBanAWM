@@ -18,10 +18,12 @@ public class SuperBanCMD extends Command {
 
     public SuperBanCMD(){
         super("sban", SuperBanMain.getInstance().getConfig().getString("sban.sbanDescrCMD"));
+        this.commandParameters.clear();
         this.commandParameters.put("players", new CommandParameter[]{
                 CommandParameter.newType("player", CommandParamType.TARGET),
                 CommandParameter.newType("reason", CommandParamType.STRING),
         });
+        this.setPermission("reyd.sban.ban");
     }
 
     @Override
@@ -40,14 +42,12 @@ public class SuperBanCMD extends Command {
             // ban
             banProcess(player, commandSender, args[1]);
 
+            // message
+            commandSender.sendMessage(SuperBanMain.getInstance().getConfig().getString("sban.banMessage").replace("%p%", args[0]));
+
         } else {
-
-            // ToDo get UUID from offline Player
-//            Server.getInstance().lookupName("")
-
+            commandSender.sendMessage(SuperBanMain.getInstance().getConfig().getString("sban.playerNotFound").replace("%tg%", args[0]));
         }
-
-        commandSender.sendMessage(SuperBanMain.getInstance().getConfig().getString("sban.banMessage").replace("%p%", args[0]));
 
         return true;
     }

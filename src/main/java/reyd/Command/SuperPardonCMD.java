@@ -4,6 +4,8 @@ import cn.nukkit.Player;
 import cn.nukkit.Server;
 import cn.nukkit.command.Command;
 import cn.nukkit.command.CommandSender;
+import cn.nukkit.command.data.CommandParamType;
+import cn.nukkit.command.data.CommandParameter;
 import cn.nukkit.utils.Config;
 import reyd.SuperBanMain;
 
@@ -14,6 +16,11 @@ public class SuperPardonCMD extends Command {
 
     public SuperPardonCMD(){
         super("spardon", SuperBanMain.getInstance().getConfig().getString("sban.spardonDescrCMD"));
+        this.commandParameters.clear();
+        this.commandParameters.put("players", new CommandParameter[]{
+                CommandParameter.newType("player", CommandParamType.STRING),
+        });
+        this.setPermission("reyd.sban.pardon");
     }
 
     @Override

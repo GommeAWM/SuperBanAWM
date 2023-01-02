@@ -6,4 +6,5 @@ sban:
   banMessage: "You have success banned player %p%"
   pardonMessage: "You have success pardoned player %p%"
   reasonBan: "\n§r§6You, §a%tg% §f, §chave been blocked on the server\n§r§fReasоn: §6%reason%\n§r§6pardon is blocked\n§r§frules: §3link"
-  playerNotFound: "Player %p% not found"
+  notification: "§7(§cAdmin§7) §3Bans! §7(Super Ban)\n §fBlocked player: §b%tg%\n §fBlocked by аdministrator:  §c%p%.\n §freason: §6%reason%\n Period: §aFor Forеver"
+  playerNotFound: "Player %tg% not found"

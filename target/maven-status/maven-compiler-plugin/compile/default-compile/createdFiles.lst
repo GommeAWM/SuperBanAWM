@@ -1,4 +1,5 @@
 reyd\Command\SuperPardonCMD.class
 reyd\Command\SuperBanCMD.class
+reyd\Command\SuperBansListCMD.class
 reyd\Listener\LoginListener.class
 reyd\SuperBanMain.class
