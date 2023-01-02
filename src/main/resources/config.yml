@@ -7,7 +7,7 @@ sban:
   spardonUsageCMD: "§cUsage: §7/spardon"
 
   # sendMessage Section
-  banMessage: "You have success banned player %p%"
+  banMessage: "You have success banned player %tg%"
   pardonMessage: "You have success pardoned player %tg%"
 
   # %tg% = target || %p% = Admin || %reason% = reason

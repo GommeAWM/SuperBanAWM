@@ -43,7 +43,7 @@ public class SuperBanCMD extends Command {
             banProcess(player, commandSender, args[1]);
 
             // message
-            commandSender.sendMessage(SuperBanMain.getInstance().getConfig().getString("sban.banMessage").replace("%p%", args[0]));
+            commandSender.sendMessage(SuperBanMain.getInstance().getConfig().getString("sban.banMessage").replace("%tg%", args[0]));
 
         } else {
             commandSender.sendMessage(SuperBanMain.getInstance().getConfig().getString("sban.playerNotFound").replace("%tg%", args[0]));
