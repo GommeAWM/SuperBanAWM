@@ -34,7 +34,7 @@ Plugin SuperBan | Minecraft Bedrock Edition | API 1.0.14 | Nukkit | SupportAWM
 
 ---
 
-> * Link to cloudburstmc article -> [CloudburstMC](wait) | Link to our discord group -> [SupportAWM](https://discord.gg/mAZ9YMV3)
+> * Link to cloudburstmc article -> [CloudburstMC](https://www.cloudburstmc.org/resources/superbanawm.879/) | Link to our discord group -> [SupportAWM](https://discord.gg/mAZ9YMV3)
 
 ---
 
